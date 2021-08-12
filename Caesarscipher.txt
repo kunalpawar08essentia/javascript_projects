@@ -1,0 +1,20 @@
+function rot13(str) {
+  var ans="";
+  for(var i=0;i<str.length;i++)
+  {
+      var asn=str[i].charCodeAt();
+      if(asn>=65&&asn<=77)
+      {
+        ans+=String.fromCharCode(asn+13);
+      }
+      else if(asn>=78&&asn<=90)
+      {
+        ans+=String.fromCharCode(asn-13);
+      }
+      else
+        ans+=str[i];
+  }
+  return ans;
+}
+
+rot13("KUNAL JITENDRA PAWAR");
